@@ -5,6 +5,3 @@ uploads/*
 !.gitkeep
 
 geojoy_server.log
-
-.vercel
-.env*

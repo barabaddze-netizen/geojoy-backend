@@ -2069,8 +2069,10 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     connect_db().close()
-    host=os.environ.get('HOST','127.0.0.1').strip() or '127.0.0.1'
-    port=int(os.environ.get('PORT','8052'))
+    port_setting=os.environ.get('PORT')
+    default_host='0.0.0.0' if port_setting else '127.0.0.1'
+    host=os.environ.get('HOST',default_host).strip() or default_host
+    port=int(port_setting or '8052')
     print('\nGeoJoy is starting...')
     print('Public website: http://localhost:%s/'%port)
     print('Admin Panel:    http://localhost:%s/admin'%port)

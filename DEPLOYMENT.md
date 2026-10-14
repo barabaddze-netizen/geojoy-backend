@@ -9,7 +9,7 @@ After your DNS and HTTPS certificate are configured, use:
 - Public website: `https://YOUR_DOMAIN/`
 - Admin panel: `https://YOUR_DOMAIN/admin/`
 
-These are URL templates, not live links. Both paths use the same GeoJoy host. No persistent production host or domain was connected for this handoff.
+These are URL templates, not live links. Both paths use the same GeoJoy host. A Render service is visible in the supplied screenshot, but its deployment was still failing the port scan; no healthy public URL has been verified.
 
 ## 1. Prepare a persistent Ubuntu server
 
@@ -127,6 +127,12 @@ Keep backups off the host and periodically test restoring them to a separate dir
 
 Deploy the complete project, including `static/`, `uploads/`, and `geojoy_v8.db`. The canonical CSS/JavaScript sources remain at the project root; run `python3 sync_static_assets.py` after changing them to refresh the conventional `/static/` copies (four CSS/JS files plus the local SVG favicon). The included `Procfile` performs this sync and starts the existing Python app with `HOST=0.0.0.0` and `GEOJOY_COOKIE_SECURE=1`; the hosting provider must supply `PORT`, HTTPS, and persistent storage for the database and uploads. Use this Procfile only behind HTTPS. A static-only website host is insufficient because GeoJoy's API, forms, authentication, and admin panel require `server.py`.
 
+### Render web service
+
+The provided Render log shows the service running the custom start command `python3 server.py`, which bypasses the `Procfile`. Previously, with no explicit `HOST`, the server defaulted to `127.0.0.1`; Render therefore could not detect a listener on `0.0.0.0`. The updated server now keeps the loopback default for local runs without `PORT`, but automatically binds to `0.0.0.0` when `PORT` is injected and `HOST` is omitted. An explicit `HOST` remains authoritative.
+
+Recommended Render **Start Command**: `python3 sync_static_assets.py && python3 server.py`. Render supplies `PORT`; the new default handles the public bind. Add `GEOJOY_COOKIE_SECURE=1` in the Render Environment settings (or use the included `Procfile`, which sets it) so admin session cookies remain secure behind HTTPS. Keep a persistent disk mounted for `geojoy_v8.db` and `uploads/`; the free instance can spin down, so first requests may be delayed.
+
 After deployment, test the actual GET requests (not just `HEAD`, which this small server does not implement) for both current and legacy URLs:
 
 ```bash
@@ -140,4 +146,4 @@ Every listed request should return HTTP 200. The server allowlists the four expe
 
 ## Local verification
 
-For a local-only run, use `python3 server.py` from the project directory, then open `http://127.0.0.1:8052/` or `http://127.0.0.1:8052/admin/`. Leave `HOST` unset for the safe loopback default and leave `GEOJOY_COOKIE_SECURE` unset when testing over plain HTTP.
+For a local-only run, use `python3 server.py` from the project directory with `PORT` unset, then open `http://127.0.0.1:8052/` or `http://127.0.0.1:8052/admin/`. If you choose a local custom `PORT`, explicitly set `HOST=127.0.0.1`. Leave `GEOJOY_COOKIE_SECURE` unset when testing over plain HTTP.

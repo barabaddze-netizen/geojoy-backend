@@ -37,7 +37,7 @@ The original database schema and non-photo stored content were compared against 
 - The data retains one legacy `transferSettings.image` fallback path that intentionally mirrors the first transfer slide for compatibility. It is not a second displayed photo; the 60 distinct local photo files remain unique.
 - The Security section was opened, but password-change and account-recovery submissions were intentionally not made. The existing credentials and recovery settings were left unchanged.
 - `GEOJOY_COOKIE_SECURE=1` was tested on a local login response: it emitted `Secure`, `HttpOnly` and `SameSite=Strict`. A real external HTTPS/Nginx deployment was not run.
-- No production host/domain was available or published. The URL forms in `DEPLOYMENT.md` are placeholders, not live links. Change the existing admin password and configure HTTPS before public exposure.
+- A Render service is visible in the supplied screenshot, but it was not healthy/published; no public URL has been provided or verified. URL forms in `DEPLOYMENT.md` remain placeholders. Change the existing admin password and configure HTTPS before public exposure.
 
 ## Evidence
 
@@ -63,6 +63,18 @@ The targeted static-path suite then passed twice on fresh disposable project/dat
 
 Python compilation and both JavaScript syntax checks passed for this follow-up. The added report files are `qa/static-fix-round1.json` and `qa/static-fix-round2.json`.
 
-**Live-host limitation:** no live URL or hosting access was provided. Thus these results verify the updated project on its local Python server and fresh copies, not the user's deployed website or an external hosting platform. In particular, the reported live `/static/styles.css` failure still needs a request against the actual domain to confirm the host is running this project and the included `Procfile`/static directory. Do not treat the external live site as verified yet.
+**Live-host limitation:** The user has supplied a Render dashboard screenshot (service `geojoy-backend`), but it shows deployment in progress and no open ports; no public service URL or authorized deployment connection was provided. The reported live `/static/styles.css` failure still needs a request against the actual domain after redeployment. Do not treat the external live site as verified yet.
 
 A clean extraction of the release ZIP was also run through the same targeted runtime suite. It passed all 9 static/legacy asset paths, all 60 image endpoints, all 8 routes, admin login and the 11-tab check at the four viewport widths with zero browser errors. Its machine-readable result is `qa/final-zip-smoke.json`. This remains a local clean-extract test, not proof of the user's external deployment; the deployed site still needs its actual URL for verification.
+
+## Render port-scan follow-up
+
+The supplied Render screenshot shows its custom start command is `python3 server.py`, not the included `Procfile` command, followed by a scan failure for `0.0.0.0`. That confirmed the cause: before this patch, omitting `HOST` selected `127.0.0.1`, so Render's external port scan could not reach the listener. The server now selects `0.0.0.0` when `PORT` is present and `HOST` is omitted; running locally without `PORT` still selects `127.0.0.1`, and an explicit `HOST` still takes precedence.
+
+A disposable Render-style runtime test passed: with `PORT=8065` and `HOST` absent, the process listened on `0.0.0.0:8065`; health, homepage and `/static/styles.css` returned HTTP 200. A second test with `HOST=127.0.0.1` and `PORT=8066` kept the loopback bind, with the same routes returning HTTP 200. Results are in `qa/render-port-binding.json`.
+
+**External redeploy remains pending.** This test reproduces Render's injected-port bind condition locally; it does not prove the user's Render deployment has redeployed or become healthy. The screenshot's service was still scanning ports. Use the updated source, preferably the documented Start Command `python3 sync_static_assets.py && python3 server.py`, and set `GEOJOY_COOKIE_SECURE=1` in Render's environment (or use the Procfile). Then provide the service's public URL so its actual homepage, static assets and admin can be checked.
+
+The no-`PORT` local-default case was also run independently on port 8052: it listened on `127.0.0.1` and `/api/health` returned HTTP 200. This confirms the Render fix did not broaden ordinary local startup. Together, the PORT-injected, explicit-HOST, and no-PORT tests are recorded in `qa/render-port-binding.json`.
+
+After the PORT-aware change, the release ZIP was extracted again and tested. The package copy passed the same 9 asset-path, 60 image, 8 route, admin-login, 11-tab, four-viewport and zero-console-error checks. Bind tests against copies of that extracted archive also passed for Render-style `PORT` without `HOST` (`0.0.0.0`), explicit loopback `HOST`, and local startup with no `PORT` (`127.0.0.1`). The current results are in `qa/final-zip-smoke.json` and `qa/render-port-binding.json`.
