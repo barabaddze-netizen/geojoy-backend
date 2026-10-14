@@ -1,14 +1,18 @@
 # GeoJoy — QA and change report
 
-## Outcome
+## Current status
 
-**The final updated project passed two independent full browser-verification rounds.** Each round used a fresh disposable copy of the delivered database and files; the delivery database was not modified by the QA workflows.
+**Local project:** The delivered application passed two independent full browser-verification rounds on fresh disposable copies. The delivery database was not modified by QA.
 
-The selected Tbilisi region image now uses a different, authentic Old Tbilisi/fortress-at-dusk photograph. Its locally served WebP derivative is **1,913 × 1,920 px** (799,414 bytes); the source image is **2,933 × 2,943 px**. The existing Tbilisi region card and admin editor both display the new local path. The retired Tbilisi region image file and its active references were removed.
+**Live Render deployment:** Not fully verified and currently missing all referenced photos. On 2026-10-14, the live content API returned 60 unique `/uploads/*.webp` paths; a direct GET test found **0/60 HTTP 200** and **60/60 HTTP 404**. The homepage and app assets respond, but the hero and destination photos do not load. Do not describe the live deployment as complete until the assets are redeployed and retested.
 
-The admin stylesheet received one targeted mobile rule to show the existing site-view and logout actions below the admin tab bar. No application routes, content, API handlers, business logic, authentication rules, or database schema were rewritten. The Python server now accepts optional `HOST` and `GEOJOY_COOKIE_SECURE` environment settings so an HTTPS reverse-proxy deployment can bind safely and set a Secure session cookie; its loopback/plain-HTTP local defaults remain unchanged.
+The likely cause is confirmed in the source deployment rules: `.gitignore` contained `uploads/*`, excluding the curated photos from a Git-based deployment. The corrected rule now allows only `uploads/geojoy_*.webp`; the deployment guide includes the exact Git staging/push instructions. The release ZIP contains all 60 WebP files.
 
-## Two-round test results
+**Live admin check:** `/admin/` returns HTTP 200 and renders the GeoJoy Admin Panel login page with a password field. Its stylesheet, JavaScript, favicon, and `/api/health` also return HTTP 200. No live credentials were submitted, so authenticated login and editing workflows remain unverified on Render. No live data was changed.
+
+## Two-round local test results
+
+Each round used a fresh disposable copy of the project and database. These results establish local behavior only; they do not override the live Render photo failure reported above.
 
 | Check | Round 1 | Round 2 |
 |---|---:|---:|
@@ -17,64 +21,76 @@ The admin stylesheet received one targeted mobile rule to show the existing site
 | Local image response status/type | HTTP 200, `image/webp` | HTTP 200, `image/webp` |
 | Homepage images decoded | 42; 0 broken | 42; 0 broken |
 | Admin sections loaded | 11 / 11 | 11 / 11 |
-| Public/admin horizontal overflow across 1440, 1024, 768, 520, 390, 360 and 320 px | None | None |
+| Public/admin horizontal overflow across 1440, 1024, 768, 520, 390, and 320 px | None | None |
 | Phone-width logout action | Visible | Visible |
 | Browser console/page/request errors | 0 | 0 |
 | SQLite restart persistence and integrity | PASS; integrity `ok` | PASS; integrity `ok` |
 | HTTPS-configured session-cookie flags | PASS | PASS |
 
-The Tbilisi card image was also opened and decoded at **1440 × 960**, **390 × 844** and **320 × 844**. The browser loaded `uploads/geojoy_regions_tbilisi_dusk.webp`, reported `object-fit: cover`, and showed a nonzero, natural image size at each tested viewport. Desktop and phone screenshots are included in `qa/evidence/`.
+The Tbilisi card image was opened and decoded at **1440 × 960**, **390 × 844**, and **320 × 844**. The browser loaded `uploads/geojoy_regions_tbilisi_dusk.webp`, reported `object-fit: cover`, and showed nonzero natural dimensions at each viewport. Desktop and phone screenshots are in `qa/evidence/`.
 
-## Admin workflows actually exercised
+## Admin workflows exercised locally
 
-Across the two disposable rounds, the browser test authenticated, loaded all 11 admin sections and logged out. It exercised the existing Tbilisi region image preview, image upload (HTTP 200), save, public rendering after refresh, restoration of the selected Tbilisi photo, and a second public refresh. It also exercised representative region/tour edit-save and add/delete paths, the booking form and protected admin booking view, contact save plus public telephone-link rendering after refresh, branding and translation save/restore, transfer-slide add/delete/save, image upload/reference clearing, and the mobile logout action. Contact and image changes survived a server-process restart in both copies.
+Across the two disposable rounds, QA authenticated, loaded all 11 admin sections, and logged out. It exercised the Tbilisi region image preview, image upload (HTTP 200), save, public rendering after refresh, restoration of the selected Tbilisi photo, representative region/tour edit-save and add/delete paths, the booking form and protected admin booking view, contact save and public telephone-link rendering after refresh, branding and translation save/restore, transfer-slide add/delete/save, image upload/reference clearing, and the mobile logout action. Contact and image changes survived a server-process restart in both copies.
 
-The original database schema and non-photo stored content were compared against the project before this update. The only stored-content difference is the Tbilisi region image path; the source database had **zero booking rows**. Schema integrity checks passed.
+The original database schema and non-photo stored content were compared against the project. The only stored-content difference is the Tbilisi region image path; the source database had **zero booking rows**. SQLite integrity checks passed.
 
-### Scope limits recorded honestly
+## Live Render verification — 2026-10-14
 
-- The existing about-image removal action was verified to clear and save the image reference. The existing server does not expose a physical uploaded-file deletion operation; the test did not claim that it deletes file bytes.
-- The data retains one legacy `transferSettings.image` fallback path that intentionally mirrors the first transfer slide for compatibility. It is not a second displayed photo; the 60 distinct local photo files remain unique.
-- The Security section was opened, but password-change and account-recovery submissions were intentionally not made. The existing credentials and recovery settings were left unchanged.
-- `GEOJOY_COOKIE_SECURE=1` was tested on a local login response: it emitted `Secure`, `HttpOnly` and `SameSite=Strict`. A real external HTTPS/Nginx deployment was not run.
-- A Render service is visible in the supplied screenshot, but it was not healthy/published; no public URL has been provided or verified. URL forms in `DEPLOYMENT.md` remain placeholders. Change the existing admin password and configure HTTPS before public exposure.
+All checks below used read-only HTTPS GET requests against the URL supplied by the user. No admin form was submitted and no database or account state was changed.
+
+| Live check | Result |
+|---|---:|
+| `/` public homepage | HTTP 200 |
+| `/admin/` admin login route | HTTP 200; login markup and password input present |
+| `/api/content?build=8.9.0` | HTTP 200; 60 unique upload paths |
+| `/api/health` | HTTP 200 |
+| `/static/styles.css`, `/static/app.js`, `/static/admin.css`, `/static/admin.js`, `/static/geojoy-favicon.svg` | HTTP 200 |
+| Legacy root `/styles.css`, `/app.js` | HTTP 200 |
+| Unique `/uploads/*.webp` paths | **0 / 60 HTTP 200; 60 / 60 HTTP 404** |
+| Live authenticated admin features | Not tested; credentials were not supplied or entered |
+| Live data changes | None |
+
+The rendered homepage DOM also marked its hero image with `image-load-failed` and `naturalWidth: 0`, consistent with the HTTP 404 results. This is the reason the live deployment is not yet photo-complete.
+
+## Deployment correction
+
+The prior `.gitignore` rule `uploads/*` excluded every image from Git. The corrected file keeps runtime uploads ignored while allowing the bundled images to ship:
+
+```gitignore
+uploads/*
+!uploads/.gitkeep
+!uploads/geojoy_*.webp
+```
+
+For Git-based Render deployments, stage the ignore change and image files, then push and wait for Render to redeploy:
+
+```bash
+git add .gitignore uploads/geojoy_*.webp
+git commit -m "Include GeoJoy photo assets"
+git push
+```
+
+Keep the production SQLite database and runtime uploads on persistent storage and do not overwrite newer live data with a starter copy. After redeployment, repeat GET checks for all 60 paths and inspect the live homepage before claiming the photo fix is complete.
+
+## Other findings and limitations
+
+- The about-image removal action clears and saves the image reference; the existing server does not expose a physical uploaded-file deletion operation, so tests did not claim it deletes file bytes.
+- The data retains one legacy `transferSettings.image` fallback path that intentionally mirrors the first transfer slide for compatibility; it is not a second displayed photo.
+- The Security section was opened locally, but password-change and account-recovery submissions were not made. Existing credentials and recovery settings were left unchanged.
+- `GEOJOY_COOKIE_SECURE=1` was tested locally: the login response emitted `Secure`, `HttpOnly`, and `SameSite=Strict`. A real external HTTPS reverse-proxy deployment was not exercised by those local checks.
+- Live admin route reachability is verified, but live login and authenticated editing are not. Live responsive browser checks across all widths have not been repeated after deployment.
 
 ## Evidence
 
-- `qa/round1-results.json` and `qa/round2-results.json` contain the machine-readable round results.
-- `qa/evidence/` contains the region-card desktop/mobile captures and authenticated admin/mobile screenshots.
-- The photo source, creator, license and original dimensions are recorded in `photo_manifest.json` and the existing photo-credit page.
+- `qa/round1-results.json` and `qa/round2-results.json` contain the two local full-round results.
+- `qa/static-fix-round1.json`, `qa/static-fix-round2.json`, `qa/final-zip-smoke.json`, and `qa/render-port-binding.json` record the targeted static-path, clean-extract, and Render-style bind tests.
+- `qa/evidence/` contains the local region-card desktop/mobile captures and authenticated admin/mobile screenshots.
+- The photo source, creator, license, original dimensions, and credits are recorded in `photo_manifest.json` and the photo-credit page.
 
-## Follow-up: static asset and deployment-path regression
 
-A fresh local reproduction confirmed that this project's Python server already served `/static/styles.css`, `/static/app.js`, `/static/admin.css`, and `/static/admin.js` successfully, but returned 404 for legacy root requests such as `/styles.css` and `/app.js`. The project also lacked a physical `static/` directory for conventional hosts. I added synchronized `static/` copies, a root-asset compatibility route, a five-file `/static/` allowlist (including a local favicon), and a `Procfile` that syncs assets before starting the existing Python server. Requests for arbitrary files such as `/static/geojoy_v8.db` now correctly return 404.
+## Corrected release package smoke test — 2026-10-14
 
-The targeted static-path suite then passed twice on fresh disposable project/database copies:
+After updating `.gitignore` and the deployment notes, the refreshed ZIP was integrity-checked and extracted into a clean temporary directory. The extracted server returned HTTP 200 for the homepage, admin login route, health/content APIs, all required `/static/` CSS/JavaScript/favicon routes, and the legacy root CSS/JavaScript aliases. Its content API listed 60 unique photo paths; **all 60 returned HTTP 200 as `image/webp` and decoded successfully**. The admin login markup/title/password field were present. A temporary Git repository also confirmed that `uploads/geojoy_*.webp` is no longer ignored while arbitrary runtime uploads and `geojoy_v8.db` remain ignored.
 
-| Follow-up check | Round 1 | Round 2 |
-|---|---:|---:|
-| `/static/` and legacy root CSS/JS asset requests | 9 / 9 HTTP 200 | 9 / 9 HTTP 200 |
-| Unique local WebP image endpoints | 60 / 60 HTTP 200 | 60 / 60 HTTP 200 |
-| Public, admin, credits, section and health routes | 8 / 8 HTTP 200 | 8 / 8 HTTP 200 |
-| Admin login and visible sections | PASS; 11 tabs | PASS; 11 tabs |
-| Public responsive overflow at 1440, 768, 390 and 320 px | None | None |
-| Browser console/page/request errors | 0 | 0 |
-| Protected database-file path under `/static/` | HTTP 404 (expected) | HTTP 404 (expected) |
-
-Python compilation and both JavaScript syntax checks passed for this follow-up. The added report files are `qa/static-fix-round1.json` and `qa/static-fix-round2.json`.
-
-**Live-host limitation:** The user has supplied a Render dashboard screenshot (service `geojoy-backend`), but it shows deployment in progress and no open ports; no public service URL or authorized deployment connection was provided. The reported live `/static/styles.css` failure still needs a request against the actual domain after redeployment. Do not treat the external live site as verified yet.
-
-A clean extraction of the release ZIP was also run through the same targeted runtime suite. It passed all 9 static/legacy asset paths, all 60 image endpoints, all 8 routes, admin login and the 11-tab check at the four viewport widths with zero browser errors. Its machine-readable result is `qa/final-zip-smoke.json`. This remains a local clean-extract test, not proof of the user's external deployment; the deployed site still needs its actual URL for verification.
-
-## Render port-scan follow-up
-
-The supplied Render screenshot shows its custom start command is `python3 server.py`, not the included `Procfile` command, followed by a scan failure for `0.0.0.0`. That confirmed the cause: before this patch, omitting `HOST` selected `127.0.0.1`, so Render's external port scan could not reach the listener. The server now selects `0.0.0.0` when `PORT` is present and `HOST` is omitted; running locally without `PORT` still selects `127.0.0.1`, and an explicit `HOST` still takes precedence.
-
-A disposable Render-style runtime test passed: with `PORT=8065` and `HOST` absent, the process listened on `0.0.0.0:8065`; health, homepage and `/static/styles.css` returned HTTP 200. A second test with `HOST=127.0.0.1` and `PORT=8066` kept the loopback bind, with the same routes returning HTTP 200. Results are in `qa/render-port-binding.json`.
-
-**External redeploy remains pending.** This test reproduces Render's injected-port bind condition locally; it does not prove the user's Render deployment has redeployed or become healthy. The screenshot's service was still scanning ports. Use the updated source, preferably the documented Start Command `python3 sync_static_assets.py && python3 server.py`, and set `GEOJOY_COOKIE_SECURE=1` in Render's environment (or use the Procfile). Then provide the service's public URL so its actual homepage, static assets and admin can be checked.
-
-The no-`PORT` local-default case was also run independently on port 8052: it listened on `127.0.0.1` and `/api/health` returned HTTP 200. This confirms the Render fix did not broaden ordinary local startup. Together, the PORT-injected, explicit-HOST, and no-PORT tests are recorded in `qa/render-port-binding.json`.
-
-After the PORT-aware change, the release ZIP was extracted again and tested. The package copy passed the same 9 asset-path, 60 image, 8 route, admin-login, 11-tab, four-viewport and zero-console-error checks. Bind tests against copies of that extracted archive also passed for Render-style `PORT` without `HOST` (`0.0.0.0`), explicit loopback `HOST`, and local startup with no `PORT` (`127.0.0.1`). The current results are in `qa/final-zip-smoke.json` and `qa/render-port-binding.json`.
+This validates the corrected source archive locally. It does **not** repair or verify the already-running Render service; that deployment still needs the corrected assets committed/uploaded and redeployed before the live photo checks can pass.

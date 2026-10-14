@@ -4,12 +4,12 @@ This package keeps the existing Python server, SQLite schema, APIs, routes, four
 
 ## URLs
 
-After your DNS and HTTPS certificate are configured, use:
+Current Render deployment (checked 2026-10-14):
 
-- Public website: `https://YOUR_DOMAIN/`
-- Admin panel: `https://YOUR_DOMAIN/admin/`
+- Public website: https://geojoy-backend.onrender.com/
+- Admin panel: https://geojoy-backend.onrender.com/admin/
 
-These are URL templates, not live links. Both paths use the same GeoJoy host. A Render service is visible in the supplied screenshot, but its deployment was still failing the port scan; no healthy public URL has been verified.
+Both page routes are reachable (HTTP 200). However, the live content API references 60 photo files and all 60 `/uploads/*.webp` requests currently return HTTP 404. The admin login page and its CSS/JavaScript load, but authenticated admin functions were not tested against the live service. Do not treat the current deployment as complete until the photos are redeployed and rechecked.
 
 ## 1. Prepare a persistent Ubuntu server
 
@@ -125,7 +125,7 @@ Keep backups off the host and periodically test restoring them to a separate dir
 
 ## 6. Static assets and hosted startup
 
-Deploy the complete project, including `static/`, `uploads/`, and `geojoy_v8.db`. The canonical CSS/JavaScript sources remain at the project root; run `python3 sync_static_assets.py` after changing them to refresh the conventional `/static/` copies (four CSS/JS files plus the local SVG favicon). The included `Procfile` performs this sync and starts the existing Python app with `HOST=0.0.0.0` and `GEOJOY_COOKIE_SECURE=1`; the hosting provider must supply `PORT`, HTTPS, and persistent storage for the database and uploads. Use this Procfile only behind HTTPS. A static-only website host is insufficient because GeoJoy's API, forms, authentication, and admin panel require `server.py`.
+Deploy the complete project, including `static/`, all 60 curated `uploads/geojoy_*.webp` photos, and the production `geojoy_v8.db` on persistent storage. The `.gitignore` now permits only the bundled `uploads/geojoy_*.webp` files to be tracked; runtime-uploaded files and SQLite files remain ignored. The canonical CSS/JavaScript sources remain at the project root; run `python3 sync_static_assets.py` after changing them to refresh the conventional `/static/` copies (four CSS/JS files plus the local SVG favicon). The included `Procfile` performs this sync and starts the existing Python app with `HOST=0.0.0.0` and `GEOJOY_COOKIE_SECURE=1`; the hosting provider must supply `PORT`, HTTPS, and persistent storage for the database and uploads. Use this Procfile only behind HTTPS. A static-only website host is insufficient because GeoJoy's API, forms, authentication, and admin panel require `server.py`.
 
 ### Render web service
 
@@ -133,16 +133,28 @@ The provided Render log shows the service running the custom start command `pyth
 
 Recommended Render **Start Command**: `python3 sync_static_assets.py && python3 server.py`. Render supplies `PORT`; the new default handles the public bind. Add `GEOJOY_COOKIE_SECURE=1` in the Render Environment settings (or use the included `Procfile`, which sets it) so admin session cookies remain secure behind HTTPS. Keep a persistent disk mounted for `geojoy_v8.db` and `uploads/`; the free instance can spin down, so first requests may be delayed.
 
+For a Git-based deployment, from the project root stage and push the bundled image assets along with the updated ignore rule:
+
+```bash
+git add .gitignore uploads/geojoy_*.webp
+git commit -m "Include GeoJoy photo assets"
+git push
+```
+
+If deploying from an uploaded archive instead, confirm the complete `uploads/` directory is included in the service source. Keep the production database on its persistent disk; do not replace it with a starter database during this photo-only deployment.
+
+The live check on 2026-10-14 found `/`, `/admin/`, `/api/content`, `/api/health`, CSS/JavaScript routes, and the admin favicon returning HTTP 200, but 0 of the 60 referenced image URLs returned successfully. This matches the prior `uploads/*` ignore rule excluding the curated photos from a Git-based deployment. Redeploy the assets above, then repeat the actual GET checks below before considering the live site verified.
+
 After deployment, test the actual GET requests (not just `HEAD`, which this small server does not implement) for both current and legacy URLs:
 
 ```bash
-BASE=https://YOUR_DOMAIN
+BASE=https://geojoy-backend.onrender.com
 for path in / /admin/ /static/styles.css /static/app.js /static/admin.css /static/admin.js /static/geojoy-favicon.svg /styles.css /app.js /admin.css /admin.js /uploads/geojoy_regions_tbilisi_dusk.webp; do
   curl -fsS -o /dev/null -w "$path %{http_code}\n" "$BASE$path"
 done
 ```
 
-Every listed request should return HTTP 200. The server allowlists the four expected CSS/JavaScript files and favicon under `/static/`; it returns 404 for unrelated project files instead of exposing them.
+After the photo redeploy, every listed request should return HTTP 200. The server allowlists the four expected CSS/JavaScript files and favicon under `/static/`; it returns 404 for unrelated project files instead of exposing them.
 
 ## Local verification
 

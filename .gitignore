@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 geojoy*.db
 uploads/*
-!.gitkeep
+!uploads/.gitkeep
+!uploads/geojoy_*.webp
 
 geojoy_server.log
