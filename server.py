@@ -1889,7 +1889,7 @@ class Handler(BaseHTTPRequestHandler):
         return token in SESSIONS if token else False
 
     def do_GET(self):
-        p = urlparse(self.path).path
+        p = urlparse(self.path).path.rstrip('/') or '/'
         if p in ('/','/index.html','/tours','/regions','/contact','/transfers','/about'):
             self.send_bytes((ROOT/'index.html').read_bytes())
         elif p in ('/photo-credits', '/photo-credits.html'):
@@ -1898,9 +1898,23 @@ class Handler(BaseHTTPRequestHandler):
             self.send_bytes((ROOT/'admin.html').read_bytes())
         elif p == '/api/health':
             self.json_response({'ok': True, 'version': APP_VERSION, 'adminPath': '/admin', 'port': int(os.environ.get('PORT','8052'))})
-        elif p.startswith('/api/content'):
-            con = connect_db(); row = con.execute('SELECT json FROM content WHERE id=1').fetchone(); con.close()
-            self.json_response(json.loads(row['json']))
+        elif p == '/api/content':
+            try:
+                con = connect_db()
+                try:
+                    row = con.execute('SELECT json FROM content WHERE id=1').fetchone()
+                finally:
+                    con.close()
+            except sqlite3.Error:
+                self.log_error('GeoJoy content database is unavailable')
+                return self.json_response({'error': 'Content service temporarily unavailable'},503)
+            if row is None:
+                return self.json_response({'error': 'Content data is unavailable'},503)
+            try:
+                content = json.loads(row['json'])
+            except (TypeError, json.JSONDecodeError):
+                return self.json_response({'error': 'Content data is invalid'},500)
+            return self.json_response(content)
         elif p == '/api/admin/status':
             self.json_response({'authenticated': self.session_ok()})
         elif p == '/api/admin/content':
@@ -1933,11 +1947,13 @@ class Handler(BaseHTTPRequestHandler):
             if not target.is_file(): target = ROOT / name
             if not target.is_file(): return self.send_bytes(b'Not found','text/plain',404)
             self.send_bytes(target.read_bytes(), mimetypes.guess_type(target.name)[0] or 'application/octet-stream')
+        elif p == '/api' or p.startswith('/api/'):
+            self.json_response({'error':'Not found','path':p},404)
         else:
             self.send_bytes(b'Not found','text/plain; charset=utf-8',404)
 
     def do_POST(self):
-        p = urlparse(self.path).path
+        p = urlparse(self.path).path.rstrip('/') or '/'
         try: raw = self.body()
         except ValueError as e: return self.json_response({'error':str(e)},413)
         try: data = json.loads(raw.decode('utf-8')) if raw else {}
@@ -2039,7 +2055,7 @@ class Handler(BaseHTTPRequestHandler):
         return self.json_response({'error':'Not found'},404)
 
     def do_PUT(self):
-        p=urlparse(self.path).path
+        p=urlparse(self.path).path.rstrip('/') or '/'
         if p != '/api/admin/content': return self.json_response({'error':'Not found'},404)
         if not self.session_ok(): return self.json_response({'error':'Unauthorized'},401)
         try: raw=self.body(); data=json.loads(raw.decode('utf-8'))
@@ -2059,13 +2075,19 @@ class Handler(BaseHTTPRequestHandler):
         return self.json_response({'ok':True,'message':'ცვლილებები შენახულია ამ კომპიუტერის მონაცემთა ბაზაში.','content':data})
 
     def do_PATCH(self):
-        p=urlparse(self.path).path
+        p=urlparse(self.path).path.rstrip('/') or '/'
         if p != '/api/admin/bookings': return self.json_response({'error':'Not found'},404)
         if not self.session_ok(): return self.json_response({'error':'Unauthorized'},401)
         try: data=json.loads(self.body().decode('utf-8'))
         except Exception: return self.json_response({'error':'Invalid JSON'},400)
         con=connect_db(); con.execute('UPDATE bookings SET status=? WHERE id=?',(str(data.get('status','New'))[:80],int(data.get('id',0)))); con.commit(); con.close()
         return self.json_response({'ok':True})
+
+    def do_DELETE(self):
+        p = urlparse(self.path).path.rstrip('/') or '/'
+        if p == '/api' or p.startswith('/api/'):
+            return self.json_response({'error':'Not found','path':p},404)
+        return self.send_bytes(b'Not found','text/plain; charset=utf-8',404)
 
 if __name__ == '__main__':
     connect_db().close()

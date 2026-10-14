@@ -1,0 +1,49 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/api",
+      "destination": "https://geojoy-backend.onrender.com/api"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://geojoy-backend.onrender.com/api/:path*"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "https://geojoy-backend.onrender.com/uploads/:path*"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
+    },
+    {
+      "source": "/admin/",
+      "destination": "/admin.html"
+    },
+    {
+      "source": "/photo-credits",
+      "destination": "/photo-credits.html"
+    },
+    {
+      "source": "/tours",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/regions",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/transfers",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/index.html"
+    }
+  ]
+}
