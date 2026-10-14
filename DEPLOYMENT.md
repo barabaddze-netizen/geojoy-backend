@@ -156,6 +156,14 @@ done
 
 After the photo redeploy, every listed request should return HTTP 200. The server allowlists the four expected CSS/JavaScript files and favicon under `/static/`; it returns 404 for unrelated project files instead of exposing them.
 
+## Vercel frontend → Render API
+
+The apex domain `https://geojoy.ge/` redirects to the canonical `https://www.geojoy.ge/`. A browser request to `/api/content` stays on Vercel unless Vercel is configured to proxy it. The latest live check on 2026-10-15 found `www.geojoy.ge/api/content?build=8.9.0` still returning Vercel's plain-text 404, while Render's `/api/health` and `/api/content?build=8.9.0` returned JSON HTTP 200. This confirms the backend is currently up and the remaining live issue is that the Vercel rewrite has not been deployed/activated. The root `vercel.json` included here rewrites all `/api/*` requests (including admin and booking routes) and `/uploads/*` media requests to `https://geojoy-backend.onrender.com`. Existing frontend requests remain relative; no `localhost:8052` setting is needed.
+
+In the Vercel project connected to the live `www.geojoy.ge` domain, ensure **Root Directory** points to the folder containing `vercel.json` (the same project root used to serve `index.html`), then commit and deploy that file. Vercel rewrites apply to all domains assigned to that project, including the canonical `www` hostname and apex alias. The static HTML routes (`/admin`, `/admin/`, `/photo-credits`, `/tours`, `/regions`, `/contact`, `/transfers`, and `/about`) are mapped in the same file.
+
+The latest read-only check confirms Render responds with HTTP 200 for `/api/health`, `/api/content?build=8.9.0`, and `/uploads/geojoy_transferslides_56.webp`. After Vercel deploys the rewrite, test `https://www.geojoy.ge/api/content?build=8.9.0` and require HTTP 200 JSON, then test an `/uploads/...` URL through `www.geojoy.ge`. The browser screenshot's repeated `www.geojoy.ge/api/content?build=8.9.0` 404s show that the current live Vercel deployment still needs this configuration; do not treat the local config or a successful Render response alone as end-to-end verification.
+
 ## Local verification
 
 For a local-only run, use `python3 server.py` from the project directory with `PORT` unset, then open `http://127.0.0.1:8052/` or `http://127.0.0.1:8052/admin/`. If you choose a local custom `PORT`, explicitly set `HOST=127.0.0.1`. Leave `GEOJOY_COOKIE_SECURE` unset when testing over plain HTTP.

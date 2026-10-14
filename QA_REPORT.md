@@ -94,3 +94,26 @@ Keep the production SQLite database and runtime uploads on persistent storage an
 After updating `.gitignore` and the deployment notes, the refreshed ZIP was integrity-checked and extracted into a clean temporary directory. The extracted server returned HTTP 200 for the homepage, admin login route, health/content APIs, all required `/static/` CSS/JavaScript/favicon routes, and the legacy root CSS/JavaScript aliases. Its content API listed 60 unique photo paths; **all 60 returned HTTP 200 as `image/webp` and decoded successfully**. The admin login markup/title/password field were present. A temporary Git repository also confirmed that `uploads/geojoy_*.webp` is no longer ignored while arbitrary runtime uploads and `geojoy_v8.db` remain ignored.
 
 This validates the corrected source archive locally. It does **not** repair or verify the already-running Render service; that deployment still needs the corrected assets committed/uploaded and redeployed before the live photo checks can pass.
+
+
+## API routing diagnosis — 2026-10-15
+
+The user-reported public URL is `https://geojoy.ge/`. A read-only request to `https://geojoy.ge/api/content?build=8.9.0` returned **HTTP 404 with Vercel's JSON not-found response**. This identifies the immediate API 404 as a frontend-origin routing problem: the public `app.js` correctly requests the relative path `/api/content`, but the Vercel deployment had no rewrite to the separate Python backend.
+
+The checked Python source already defines `GET /api/content`; its database path is `Path(__file__).resolve().parent / 'geojoy_v8.db'`, so it is absolute and independent of the process working directory. I tightened that route to exact-match `/api/content` (with optional trailing slash), normalized trailing slashes for API methods, and added JSON 404 responses for unknown GET/DELETE API paths. The frontend's failure banner no longer directs hosted users to start `run_windows.bat` or use local port 8052.
+
+The Render origin returned **HTTP 502** for `/`, `/api/health`, and `/api/content` during this check. Therefore the Vercel routing fix is prepared but cannot be end-to-end verified until the Render service is healthy. A root-level `vercel.json` now proxies `/api/*` and `/uploads/*` to Render and maps the existing static HTML routes. Neither Vercel nor Render was changed from this session; commit and redeploy are still required.
+
+
+## Local API fix smoke tests — 2026-10-15
+
+A temporary clean copy was launched with its current working directory outside the application folder and with only `PORT` injected. The server bound to `0.0.0.0`, opened the database relative to `server.py`, and served the content API, admin status/protected endpoints, admin HTML, static JavaScript, and an uploaded WebP. `/api/content` and `/api/content/` returned JSON HTTP 200; protected admin endpoints returned JSON HTTP 401; unknown GET, POST, PUT, PATCH, and DELETE `/api/*` routes returned JSON HTTP 404. The `vercel.json` rewrites parsed and matched the configured `/api/:path*` and `/uploads/:path*` targets. Python compilation and JavaScript syntax checks passed, and root/static `app.js` copies matched.
+
+These are local results. The live Vercel 404 and Render 502 remain until the updated project is committed/deployed and the Render service is healthy.
+
+
+## Live follow-up from screenshot — 2026-10-15
+
+The screenshot's Network panel shows repeated requests to `https://www.geojoy.ge/api/content?build=8.9.0`, each failing with HTTP 404. Fresh read-only GET checks confirm `https://geojoy.ge/` redirects to `https://www.geojoy.ge/`, so `www` is the canonical hostname the browser actually uses. The Vercel response is plain-text `The page could not be found / NOT_FOUND`.
+
+Render has recovered since the earlier check: `https://geojoy-backend.onrender.com/api/health` and `/api/content?build=8.9.0` both return HTTP 200 JSON, and a sample `/uploads/geojoy_transferslides_56.webp` returns HTTP 200 `image/webp`. The remaining live failure is therefore the Vercel rewrite not being present/active on the deployment serving `www.geojoy.ge`; the local `vercel.json` has not yet been reflected in that running deployment. The project and deployment docs now call out the canonical hostname and this verified split status. End-to-end success remains unverified until the Vercel project deploys the rewrite and `https://www.geojoy.ge/api/content?build=8.9.0` returns HTTP 200 JSON.
