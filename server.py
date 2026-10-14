@@ -1854,8 +1854,29 @@ def connect_db():
     con.commit()
     return con
 
+CORS_ORIGINS = {o.strip().rstrip('/') for o in os.environ.get('GEOJOY_CORS_ORIGINS','https://www.geojoy.ge,https://geojoy.ge').split(',') if o.strip()}
+CORS_PUBLIC_PATHS = {'/api/content','/api/bookings','/api/health'}  # public endpoints only; admin API stays same-origin (cookie auth)
+
+
 class Handler(BaseHTTPRequestHandler):
     server_version = 'GeoJoyLocal/8.9'
+
+    def cors_headers(self):
+        origin = (self.headers.get('Origin') or '').rstrip('/')
+        path = urlparse(self.path).path.rstrip('/')
+        if origin in CORS_ORIGINS and path in CORS_PUBLIC_PATHS:
+            self.send_header('Access-Control-Allow-Origin', origin)
+            self.send_header('Vary', 'Origin')
+
+    def do_OPTIONS(self):
+        self.send_response(204)
+        self.cors_headers()
+        if (self.headers.get('Origin') or '').rstrip('/') in CORS_ORIGINS:
+            self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+            self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+            self.send_header('Access-Control-Max-Age', '86400')
+        self.send_header('Content-Length', '0')
+        self.end_headers()
 
     def log_message(self, fmt, *args):
         print('[GeoJoy]', fmt % args)
@@ -1867,6 +1888,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('X-Content-Type-Options','nosniff')
         self.send_header('Referrer-Policy','strict-origin-when-cross-origin')
         self.send_header('Cache-Control','no-store')
+        self.cors_headers()
         if extra_headers:
             for k,v in extra_headers.items(): self.send_header(k,v)
         self.end_headers()

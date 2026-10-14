@@ -167,3 +167,11 @@ The latest read-only check confirms Render responds with HTTP 200 for `/api/heal
 ## Local verification
 
 For a local-only run, use `python3 server.py` from the project directory with `PORT` unset, then open `http://127.0.0.1:8052/` or `http://127.0.0.1:8052/admin/`. If you choose a local custom `PORT`, explicitly set `HOST=127.0.0.1`. Leave `GEOJOY_COOKIE_SECURE` unset when testing over plain HTTP.
+
+## Direct frontend → Render API calls (v8.9.1)
+
+The public site (`app.js`, `index.html`) now calls the Render backend directly via `API_BASE = 'https://geojoy-backend.onrender.com'` at the top of `app.js`: `GET /api/content`, `POST /api/bookings`, and every `/uploads/...` image URL (the loader rewrites `/uploads/...` values in the API response to absolute Render URLs).
+
+- **Backend must be redeployed on Render** with the updated `server.py`, which adds CORS for the public endpoints only (`/api/content`, `/api/bookings`, `/api/health`). Allowed origins default to `https://www.geojoy.ge` and `https://geojoy.ge`; override with the `GEOJOY_CORS_ORIGINS` env var (comma-separated, e.g. to add a Vercel preview domain).
+- The **admin panel** (`admin.js`) intentionally stays on same-origin `/api/...` requests: it uses an `HttpOnly; SameSite=Strict` session cookie, which would not work (and would be unsafe to loosen) cross-site. These requests rely on the `/api/*` rewrite in `vercel.json`, which is unchanged and already points at Render.
+- Local development: change `API_BASE` in `app.js` to `''` (empty string) and run `python3 sync_static_assets.py`.
