@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+geojoy*.db
+uploads/*
+!.gitkeep
+
+geojoy_server.log
+
+.vercel
+.env*

@@ -1,0 +1,1502 @@
+[
+  {
+    "group": "heroSlides",
+    "id": "",
+    "index": 0,
+    "label": "The charm of Old Tbilisi",
+    "query": "Tbilisi",
+    "local_url": "/uploads/geojoy_heroslides_01.webp",
+    "file": "geojoy_heroslides_01.webp",
+    "file_bytes": 610382,
+    "dimensions": [
+      1920,
+      1276
+    ],
+    "source_dimensions": [
+      4912,
+      3264
+    ],
+    "commons_file": "Tbilisi, Old Tbilisi 2, Georgia.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ATbilisi%2C_Old_Tbilisi_2%2C_Georgia.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Tbilisi%2C_Old_Tbilisi_2%2C_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "heroSlides",
+    "id": "",
+    "index": 1,
+    "label": "Batumi and the Black Sea coast",
+    "query": "Exact named Commons file: Batumi Skyline (31).jpg",
+    "local_url": "/uploads/geojoy_heroslides_02.webp",
+    "file": "geojoy_heroslides_02.webp",
+    "file_bytes": 555116,
+    "dimensions": [
+      1920,
+      1154
+    ],
+    "source_dimensions": [
+      3445,
+      2070
+    ],
+    "commons_file": "Batumi Skyline (31).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ABatumi_Skyline_%2831%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Batumi_Skyline_%2831%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "herr.eichhorn  from Berlin, Germany",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "heroSlides",
+    "id": "",
+    "index": 2,
+    "label": "Svan towers and the Caucasus",
+    "query": "Exact named Commons file: Near Mestia, Svan towers (35252565354).jpg",
+    "local_url": "/uploads/geojoy_heroslides_03.webp",
+    "file": "geojoy_heroslides_03.webp",
+    "file_bytes": 836672,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5184,
+      3456
+    ],
+    "commons_file": "Near Mestia, Svan towers (35252565354).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ANear_Mestia%2C_Svan_towers_%2835252565354%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Near_Mestia%2C_Svan_towers_%2835252565354%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Arian Zwegers  from Brussels, Belgium",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "heroSlides",
+    "id": "",
+    "index": 3,
+    "label": "Kazbegi and Gergeti Trinity Church",
+    "query": "Gergeti",
+    "local_url": "/uploads/geojoy_heroslides_04.webp",
+    "file": "geojoy_heroslides_04.webp",
+    "file_bytes": 196966,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      4896,
+      3672
+    ],
+    "commons_file": "Gergeti Trinity Church (15).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AGergeti_Trinity_Church_%2815%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Gergeti_Trinity_Church_%2815%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Armineaghayan",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "heroSlides",
+    "id": "",
+    "index": 4,
+    "label": "Gudauri mountain views",
+    "query": "Exact named Commons file: Snowcap in Gudauri (1).jpg",
+    "local_url": "/uploads/geojoy_heroslides_05.webp",
+    "file": "geojoy_heroslides_05.webp",
+    "file_bytes": 82034,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      2048,
+      1536
+    ],
+    "commons_file": "Snowcap in Gudauri (1).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ASnowcap_in_Gudauri_%281%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Snowcap_in_Gudauri_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Vladimer Shioshvili",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "heroSlides",
+    "id": "",
+    "index": 5,
+    "label": "The green gorge of Martvili Canyon",
+    "query": "Exact named Commons file: Martvili Canyon, Georgia. 2018 (18).jpg",
+    "local_url": "/uploads/geojoy_heroslides_06.webp",
+    "file": "geojoy_heroslides_06.webp",
+    "file_bytes": 1363070,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      4608,
+      3456
+    ],
+    "commons_file": "Martvili Canyon, Georgia. 2018 (18).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMartvili_Canyon%2C_Georgia._2018_%2818%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Martvili_Canyon%2C_Georgia._2018_%2818%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Kober",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "heroSlides",
+    "id": "",
+    "index": 6,
+    "label": "The colorful streets of Kakheti",
+    "query": "Sighnaghi",
+    "local_url": "/uploads/geojoy_heroslides_07.webp",
+    "file": "geojoy_heroslides_07.webp",
+    "file_bytes": 956968,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      5184,
+      3888
+    ],
+    "commons_file": "Sighnaghi Gebäude und Straßenansichten 17.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ASighnaghi_Geb%C3%A4ude_und_Stra%C3%9Fenansichten_17.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Sighnaghi_Geb%C3%A4ude_und_Stra%C3%9Fenansichten_17.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Giftzwerg 88",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "heroSlides",
+    "id": "",
+    "index": 7,
+    "label": "Vardzia, the cave city",
+    "query": "Vardzia",
+    "local_url": "/uploads/geojoy_heroslides_08.webp",
+    "file": "geojoy_heroslides_08.webp",
+    "file_bytes": 821772,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5472,
+      3648
+    ],
+    "commons_file": "Vardzia, a medieval cave-city in Georgia.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AVardzia%2C_a_medieval_cave-city_in_Georgia.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Vardzia%2C_a_medieval_cave-city_in_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Image by falco from Pixabay",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "heroSlides",
+    "id": "",
+    "index": 8,
+    "label": "The green paths of Borjomi",
+    "query": "Exact named Commons file: 2016 Bordżomi, Park Centralny (01).jpg",
+    "local_url": "/uploads/geojoy_heroslides_09.webp",
+    "file": "geojoy_heroslides_09.webp",
+    "file_bytes": 1053922,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5472,
+      3648
+    ],
+    "commons_file": "2016 Bordżomi, Park Centralny (01).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3A2016_Bord%C5%BComi%2C_Park_Centralny_%2801%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/2016_Bord%C5%BComi%2C_Park_Centralny_%2801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Marcin Konsek",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "heroSlides",
+    "id": "",
+    "index": 9,
+    "label": "Dashbashi Canyon",
+    "query": "Exact named Commons file: Dashbashi Canyon Natural Monument, Georgia.jpg",
+    "local_url": "/uploads/geojoy_heroslides_10.webp",
+    "file": "geojoy_heroslides_10.webp",
+    "file_bytes": 1123080,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      2048,
+      1536
+    ],
+    "commons_file": "Dashbashi Canyon Natural Monument, Georgia.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ADashbashi_Canyon_Natural_Monument%2C_Georgia.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Dashbashi_Canyon_Natural_Monument%2C_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Ani.Georgia",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "tbilisi",
+    "index": 0,
+    "label": "Tbilisi",
+    "query": "Tbilisi",
+    "local_url": "/uploads/geojoy_regions_tbilisi_dusk.webp",
+    "file": "geojoy_regions_tbilisi_dusk.webp",
+    "file_bytes": 799414,
+    "dimensions": [
+      1913,
+      1920
+    ],
+    "source_dimensions": [
+      2933,
+      2943
+    ],
+    "commons_file": "Fortress and Old Town of Tbilisi at dusk, Tbilisi, Georgia.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AFortress_and_Old_Town_of_Tbilisi_at_dusk%2C_Tbilisi%2C_Georgia.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Fortress_and_Old_Town_of_Tbilisi_at_dusk%2C_Tbilisi%2C_Georgia.jpg",
+    "author": "LeontinaVarlamonva",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "transformation": "No crop; no upscaling; resized to fit 1920 × 1920 px; converted to WebP at quality 88."
+  },
+  {
+    "group": "regions",
+    "id": "adjara",
+    "index": 1,
+    "label": "Adjara",
+    "query": "Exact named Commons file: Gonio-Apsaros Fortress-Museum, Georgia.jpg",
+    "local_url": "/uploads/geojoy_regions_12.webp",
+    "file": "geojoy_regions_12.webp",
+    "file_bytes": 629802,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      3456,
+      2304
+    ],
+    "commons_file": "Gonio-Apsaros Fortress-Museum, Georgia.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AGonio-Apsaros_Fortress-Museum%2C_Georgia.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Gonio-Apsaros_Fortress-Museum%2C_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Giorgi Balakhadze",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "svaneti",
+    "index": 2,
+    "label": "Svaneti",
+    "query": "Exact named Commons file: Mestia, evening.jpg",
+    "local_url": "/uploads/geojoy_regions_13.webp",
+    "file": "geojoy_regions_13.webp",
+    "file_bytes": 207486,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      4500,
+      3001
+    ],
+    "commons_file": "Mestia, evening.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMestia%2C_evening.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Mestia%2C_evening.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Dmytro Balkhovitin",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "kakheti",
+    "index": 3,
+    "label": "Kakheti",
+    "query": "Kakheti",
+    "local_url": "/uploads/geojoy_regions_14.webp",
+    "file": "geojoy_regions_14.webp",
+    "file_bytes": 494790,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5624,
+      3749
+    ],
+    "commons_file": "Mountains of Kakheti 2023-08-11.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMountains_of_Kakheti_2023-08-11.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Mountains_of_Kakheti_2023-08-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Alexey Komarov",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "imereti",
+    "index": 4,
+    "label": "Imereti",
+    "query": "Imereti",
+    "local_url": "/uploads/geojoy_regions_15.webp",
+    "file": "geojoy_regions_15.webp",
+    "file_bytes": 772372,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      6000,
+      4000
+    ],
+    "commons_file": "Nature of Imereti 2023-06-29-1.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ANature_of_Imereti_2023-06-29-1.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Nature_of_Imereti_2023-06-29-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Alexey Komarov",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "guria",
+    "index": 5,
+    "label": "Guria",
+    "query": "Exact named Commons file: Camellia sinensis bushes in Guria, Georgia.jpg",
+    "local_url": "/uploads/geojoy_regions_16.webp",
+    "file": "geojoy_regions_16.webp",
+    "file_bytes": 890742,
+    "dimensions": [
+      1920,
+      1011
+    ],
+    "source_dimensions": [
+      5280,
+      2779
+    ],
+    "commons_file": "Camellia sinensis bushes in Guria, Georgia.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ACamellia_sinensis_bushes_in_Guria%2C_Georgia.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Camellia_sinensis_bushes_in_Guria%2C_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Giorgi Abdaladze",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "samegrelo",
+    "index": 6,
+    "label": "Samegrelo",
+    "query": "Exact named Commons file: Dadiani.palace.06.2009.jpg",
+    "local_url": "/uploads/geojoy_regions_17.webp",
+    "file": "geojoy_regions_17.webp",
+    "file_bytes": 508206,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      3280,
+      2460
+    ],
+    "commons_file": "Dadiani.palace.06.2009.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ADadiani.palace.06.2009.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dadiani.palace.06.2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Lika (  ლ  ი  კ  ა  )",
+    "license": "Public domain",
+    "license_url": "",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "racha",
+    "index": 7,
+    "label": "Racha",
+    "query": "Exact named Commons file: 2025-06-20 Mountain view in Oni Municipality 1.jpg",
+    "local_url": "/uploads/geojoy_regions_18.webp",
+    "file": "geojoy_regions_18.webp",
+    "file_bytes": 889994,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5372,
+      3581
+    ],
+    "commons_file": "2025-06-20 Mountain view in Oni Municipality 1.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3A2025-06-20_Mountain_view_in_Oni_Municipality_1.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/2025-06-20_Mountain_view_in_Oni_Municipality_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Alexkom000",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "mtskheta",
+    "index": 8,
+    "label": "Mtskheta-Mtianeti",
+    "query": "Mtskheta",
+    "local_url": "/uploads/geojoy_regions_19.webp",
+    "file": "geojoy_regions_19.webp",
+    "file_bytes": 645730,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5472,
+      3648
+    ],
+    "commons_file": "Mtskheta and Svetitskhoveli Cathedral 3x2.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMtskheta_and_Svetitskhoveli_Cathedral_3x2.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Mtskheta_and_Svetitskhoveli_Cathedral_3x2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Dmitry A. Mottl",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "samtskhe",
+    "index": 9,
+    "label": "Samtskhe-Javakheti",
+    "query": "Akhaltsikhe",
+    "local_url": "/uploads/geojoy_regions_20.webp",
+    "file": "geojoy_regions_20.webp",
+    "file_bytes": 412482,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      5184,
+      3888
+    ],
+    "commons_file": "Akhaltsikhe Beit El synagogue0723.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AAkhaltsikhe_Beit_El_synagogue0723.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Akhaltsikhe_Beit_El_synagogue0723.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "יעקב",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "kvemo",
+    "index": 10,
+    "label": "Kvemo Kartli",
+    "query": "Exact named Commons file: Tsughrughasheni Church fortification - 11238610625.jpg",
+    "local_url": "/uploads/geojoy_regions_21.webp",
+    "file": "geojoy_regions_21.webp",
+    "file_bytes": 774050,
+    "dimensions": [
+      1867,
+      1920
+    ],
+    "source_dimensions": [
+      3000,
+      3084
+    ],
+    "commons_file": "Tsughrughasheni Church fortification - 11238610625.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ATsughrughasheni_Church_fortification_-_11238610625.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Tsughrughasheni_Church_fortification_-_11238610625.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "GelaWolf",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "regions",
+    "id": "shida",
+    "index": 11,
+    "label": "Shida Kartli",
+    "query": "Exact named Commons file: Gori fortress 10.jpg",
+    "local_url": "/uploads/geojoy_regions_22.webp",
+    "file": "geojoy_regions_22.webp",
+    "file_bytes": 233756,
+    "dimensions": [
+      1728,
+      1152
+    ],
+    "source_dimensions": [
+      1728,
+      1152
+    ],
+    "commons_file": "Gori fortress 10.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AGori_fortress_10.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Gori_fortress_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Interfase",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo01",
+    "index": 0,
+    "label": "Old Tbilisi Walking Tour",
+    "query": "Exact named Commons file: Old Tbilisi, Street, Georgia.jpg",
+    "local_url": "/uploads/geojoy_tours_23.webp",
+    "file": "geojoy_tours_23.webp",
+    "file_bytes": 522412,
+    "dimensions": [
+      1920,
+      1276
+    ],
+    "source_dimensions": [
+      4912,
+      3264
+    ],
+    "commons_file": "Old Tbilisi, Street, Georgia.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AOld_Tbilisi%2C_Street%2C_Georgia.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Old_Tbilisi%2C_Street%2C_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo03",
+    "index": 1,
+    "label": "Batumi & Black Sea Coast",
+    "query": "Exact named Commons file: Batumi Boulevard Colonnades.jpg",
+    "local_url": "/uploads/geojoy_tours_24.webp",
+    "file": "geojoy_tours_24.webp",
+    "file_bytes": 706362,
+    "dimensions": [
+      1920,
+      1079
+    ],
+    "source_dimensions": [
+      5464,
+      3070
+    ],
+    "commons_file": "Batumi Boulevard Colonnades.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ABatumi_Boulevard_Colonnades.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Batumi_Boulevard_Colonnades.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Sosotedrd",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo04",
+    "index": 2,
+    "label": "Mountainous Adjara & Makhuntseti",
+    "query": "Exact named Commons file: Makhuntseti Waterfall - მახუნცეთის ჩანჩქერი - panoramio.jpg",
+    "local_url": "/uploads/geojoy_tours_25.webp",
+    "file": "geojoy_tours_25.webp",
+    "file_bytes": 421030,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5184,
+      3456
+    ],
+    "commons_file": "Makhuntseti Waterfall - მახუნცეთის ჩანჩქერი - panoramio.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMakhuntseti_Waterfall_-_%E1%83%9B%E1%83%90%E1%83%AE%E1%83%A3%E1%83%9C%E1%83%AA%E1%83%94%E1%83%97%E1%83%98%E1%83%A1_%E1%83%A9%E1%83%90%E1%83%9C%E1%83%A9%E1%83%A5%E1%83%94%E1%83%A0%E1%83%98_-_panoramio.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Makhuntseti_Waterfall_-_%E1%83%9B%E1%83%90%E1%83%AE%E1%83%A3%E1%83%9C%E1%83%AA%E1%83%94%E1%83%97%E1%83%98%E1%83%A1_%E1%83%A9%E1%83%90%E1%83%9C%E1%83%A9%E1%83%A5%E1%83%94%E1%83%A0%E1%83%98_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Wojciech Biegun",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo05",
+    "index": 3,
+    "label": "Green Guria & Tea Heritage",
+    "query": "Guria tea",
+    "local_url": "/uploads/geojoy_tours_26.webp",
+    "file": "geojoy_tours_26.webp",
+    "file_bytes": 437974,
+    "dimensions": [
+      1920,
+      1143
+    ],
+    "source_dimensions": [
+      5190,
+      3091
+    ],
+    "commons_file": "Georgian Woman in a Tea Farm.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AGeorgian_Woman_in_a_Tea_Farm.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Georgian_Woman_in_a_Tea_Farm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Giorgi Abdaladze",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo06",
+    "index": 4,
+    "label": "Martvili Canyon & Dadiani Palace",
+    "query": "Exact named Commons file: 3 Waterfalls in Martvili Canyon Natural Monument.jpg",
+    "local_url": "/uploads/geojoy_tours_27.webp",
+    "file": "geojoy_tours_27.webp",
+    "file_bytes": 1090362,
+    "dimensions": [
+      1920,
+      1398
+    ],
+    "source_dimensions": [
+      4032,
+      2936
+    ],
+    "commons_file": "3 Waterfalls in Martvili Canyon Natural Monument.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3A3_Waterfalls_in_Martvili_Canyon_Natural_Monument.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/3_Waterfalls_in_Martvili_Canyon_Natural_Monument.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Neide18701",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo07",
+    "index": 5,
+    "label": "Okatse Canyon",
+    "query": "Okatse",
+    "local_url": "/uploads/geojoy_tours_28.webp",
+    "file": "geojoy_tours_28.webp",
+    "file_bytes": 932510,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5184,
+      3456
+    ],
+    "commons_file": "Okatse canyon.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AOkatse_canyon.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Okatse_canyon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Mygeorgianguide",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo08",
+    "index": 6,
+    "label": "Mestia & Svan Towers",
+    "query": "Exact named Commons file: Mestia defensive towers - panoramio.jpg",
+    "local_url": "/uploads/geojoy_tours_29.webp",
+    "file": "geojoy_tours_29.webp",
+    "file_bytes": 831820,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      2592,
+      1944
+    ],
+    "commons_file": "Mestia defensive towers - panoramio.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMestia_defensive_towers_-_panoramio.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Mestia_defensive_towers_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Alen Ištoković",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo09",
+    "index": 7,
+    "label": "Ushguli & Mount Shkhara Views",
+    "query": "Exact named Commons file: Ushguli and Mt Shkhara (35923023802).jpg",
+    "local_url": "/uploads/geojoy_tours_30.webp",
+    "file": "geojoy_tours_30.webp",
+    "file_bytes": 450924,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5184,
+      3456
+    ],
+    "commons_file": "Ushguli and Mt Shkhara (35923023802).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AUshguli_and_Mt_Shkhara_%2835923023802%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Ushguli_and_Mt_Shkhara_%2835923023802%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Arian Zwegers  from Brussels, Belgium",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo10",
+    "index": 8,
+    "label": "Ambrolauri & Shaori Reservoir",
+    "query": "Shaori",
+    "local_url": "/uploads/geojoy_tours_31.webp",
+    "file": "geojoy_tours_31.webp",
+    "file_bytes": 424212,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5472,
+      3648
+    ],
+    "commons_file": "2015-08-27 (27) Shaori reservoir.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3A2015-08-27_%2827%29_Shaori_reservoir.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/2015-08-27_%2827%29_Shaori_reservoir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Yasuhiro Kojima",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo11",
+    "index": 9,
+    "label": "Nikortsminda & Racha Villages",
+    "query": "Nikortsminda",
+    "local_url": "/uploads/geojoy_tours_32.webp",
+    "file": "geojoy_tours_32.webp",
+    "file_bytes": 678480,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5472,
+      3648
+    ],
+    "commons_file": "2015-08-30 (34) Nikortsminda.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3A2015-08-30_%2834%29_Nikortsminda.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/2015-08-30_%2834%29_Nikortsminda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Yasuhiro Kojima",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo12",
+    "index": 10,
+    "label": "Mtskheta, Jvari & Svetitskhoveli",
+    "query": "Svetitskhoveli",
+    "local_url": "/uploads/geojoy_tours_33.webp",
+    "file": "geojoy_tours_33.webp",
+    "file_bytes": 368900,
+    "dimensions": [
+      1920,
+      1272
+    ],
+    "source_dimensions": [
+      9102,
+      6028
+    ],
+    "commons_file": "Svetitskhoveli, Georgia-3701838.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ASvetitskhoveli%2C_Georgia-3701838.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Svetitskhoveli%2C_Georgia-3701838.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Image by Makalu from Pixabay",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo13",
+    "index": 11,
+    "label": "Kazbegi & Gergeti Trinity",
+    "query": "Gergeti",
+    "local_url": "/uploads/geojoy_tours_34.webp",
+    "file": "geojoy_tours_34.webp",
+    "file_bytes": 222190,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      4896,
+      3672
+    ],
+    "commons_file": "Gergeti Trinity Church (25).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AGergeti_Trinity_Church_%2825%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Gergeti_Trinity_Church_%2825%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Armineaghayan",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo14",
+    "index": 12,
+    "label": "Gudauri & Jvari Pass",
+    "query": "Exact named Commons file: Russia- Georgia Friendship Monument (31002685640).jpg",
+    "local_url": "/uploads/geojoy_tours_35.webp",
+    "file": "geojoy_tours_35.webp",
+    "file_bytes": 423842,
+    "dimensions": [
+      1632,
+      1224
+    ],
+    "source_dimensions": [
+      1632,
+      1224
+    ],
+    "commons_file": "Russia- Georgia Friendship Monument (31002685640).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ARussia-_Georgia_Friendship_Monument_%2831002685640%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Russia-_Georgia_Friendship_Monument_%2831002685640%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "shankar s.  from Dubai, united arab emirates",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo15",
+    "index": 13,
+    "label": "Borjomi & National Park",
+    "query": "Borjomi",
+    "local_url": "/uploads/geojoy_tours_36.webp",
+    "file": "geojoy_tours_36.webp",
+    "file_bytes": 859728,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5822,
+      3881
+    ],
+    "commons_file": "2024-08-25 A view from the Cross Mountain (Borjomi) 2.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3A2024-08-25_A_view_from_the_Cross_Mountain_%28Borjomi%29_2.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/2024-08-25_A_view_from_the_Cross_Mountain_%28Borjomi%29_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Alexkom000",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo16",
+    "index": 14,
+    "label": "Bakuriani Mountain Resort",
+    "query": "Exact named Commons file: Bakuriani winter resort, Georgia. January 2022 01.jpg",
+    "local_url": "/uploads/geojoy_tours_37.webp",
+    "file": "geojoy_tours_37.webp",
+    "file_bytes": 606076,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      4032,
+      3024
+    ],
+    "commons_file": "Bakuriani winter resort, Georgia. January 2022 01.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ABakuriani_winter_resort%2C_Georgia._January_2022_01.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Bakuriani_winter_resort%2C_Georgia._January_2022_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Kober",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo17",
+    "index": 15,
+    "label": "Vardzia Cave City",
+    "query": "Vardzia",
+    "local_url": "/uploads/geojoy_tours_38.webp",
+    "file": "geojoy_tours_38.webp",
+    "file_bytes": 775094,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5079,
+      3386
+    ],
+    "commons_file": "Vardzia (a).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AVardzia_%28a%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Vardzia_%28a%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Kakhi Kuloshvili",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo18",
+    "index": 16,
+    "label": "Sighnaghi & Bodbe",
+    "query": "Bodbe",
+    "local_url": "/uploads/geojoy_tours_39.webp",
+    "file": "geojoy_tours_39.webp",
+    "file_bytes": 708236,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      6000,
+      4000
+    ],
+    "commons_file": "Bodbe Monastery, Georgia. June 2017.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ABodbe_Monastery%2C_Georgia._June_2017.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Bodbe_Monastery%2C_Georgia._June_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Hendrik Wieduwilt",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo19",
+    "index": 17,
+    "label": "Telavi & Alaverdi",
+    "query": "Exact named Commons file: Alaverdi Cathedral, Kakheti, Georgia.jpg",
+    "local_url": "/uploads/geojoy_tours_40.webp",
+    "file": "geojoy_tours_40.webp",
+    "file_bytes": 399878,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      4000,
+      3000
+    ],
+    "commons_file": "Alaverdi Cathedral, Kakheti, Georgia.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AAlaverdi_Cathedral%2C_Kakheti%2C_Georgia.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Alaverdi_Cathedral%2C_Kakheti%2C_Georgia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Image by lenmic2 from Pixabay",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo20",
+    "index": 18,
+    "label": "David Gareja Monastery",
+    "query": "Gareja",
+    "local_url": "/uploads/geojoy_tours_41.webp",
+    "file": "geojoy_tours_41.webp",
+    "file_bytes": 714978,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5894,
+      3930
+    ],
+    "commons_file": "Caves at the David Gareja Monastery 2022.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ACaves_at_the_David_Gareja_Monastery_2022.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Caves_at_the_David_Gareja_Monastery_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Incredibleusername",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo21",
+    "index": 19,
+    "label": "Kutaisi, Bagrati & Gelati",
+    "query": "Bagrati",
+    "local_url": "/uploads/geojoy_tours_42.webp",
+    "file": "geojoy_tours_42.webp",
+    "file_bytes": 663666,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5400,
+      3600
+    ],
+    "commons_file": "2025-06-21 Bagrati Cathedral 1.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3A2025-06-21_Bagrati_Cathedral_1.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/2025-06-21_Bagrati_Cathedral_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Alexkom000",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo22",
+    "index": 20,
+    "label": "Prometheus Cave & Sataplia",
+    "query": "Prometheus cave",
+    "local_url": "/uploads/geojoy_tours_43.webp",
+    "file": "geojoy_tours_43.webp",
+    "file_bytes": 1013770,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5184,
+      3456
+    ],
+    "commons_file": "Prometheus cave, Georgia - 36291500224.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3APrometheus_cave%2C_Georgia_-_36291500224.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Prometheus_cave%2C_Georgia_-_36291500224.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Jon Gudorf Photography",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo23",
+    "index": 21,
+    "label": "Dashbashi Canyon & Diamond Bridge",
+    "query": "Exact named Commons file: Dashbashi 03.jpg",
+    "local_url": "/uploads/geojoy_tours_44.webp",
+    "file": "geojoy_tours_44.webp",
+    "file_bytes": 619052,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      2000,
+      1333
+    ],
+    "commons_file": "Dashbashi 03.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ADashbashi_03.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Dashbashi_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Paata vardanashvili",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo24",
+    "index": 22,
+    "label": "Bolnisi Heritage Tour",
+    "query": "Bolnisi Sioni",
+    "local_url": "/uploads/geojoy_tours_45.webp",
+    "file": "geojoy_tours_45.webp",
+    "file_bytes": 693964,
+    "dimensions": [
+      1920,
+      1279
+    ],
+    "source_dimensions": [
+      4255,
+      2834
+    ],
+    "commons_file": "Bolnisi Sioni Cathedral.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3ABolnisi_Sioni_Cathedral.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Bolnisi_Sioni_Cathedral.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Diaoha",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo25",
+    "index": 23,
+    "label": "Uplistsikhe & Gori",
+    "query": "Uplistsikhe",
+    "local_url": "/uploads/geojoy_tours_46.webp",
+    "file": "geojoy_tours_46.webp",
+    "file_bytes": 696578,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      6636,
+      4424
+    ],
+    "commons_file": "Middle ages Basilica on the top of the cave, Uplistsikhe 20230920 (III).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMiddle_ages_Basilica_on_the_top_of_the_cave%2C_Uplistsikhe_20230920_%28III%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Middle_ages_Basilica_on_the_top_of_the_cave%2C_Uplistsikhe_20230920_%28III%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "This Photo was taken by Supanut Arunoprayote . Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่ง ข้อความบอกกล่าวด้วย ) Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved. Please if you think that any changes should be required, please inform the author. Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract .",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo26",
+    "index": 24,
+    "label": "Ateni Sioni & Tana Valley",
+    "query": "Exact named Commons file: Ateni Sioni Church.1.jpg",
+    "local_url": "/uploads/geojoy_tours_47.webp",
+    "file": "geojoy_tours_47.webp",
+    "file_bytes": 339592,
+    "dimensions": [
+      1920,
+      1278
+    ],
+    "source_dimensions": [
+      2816,
+      1875
+    ],
+    "commons_file": "Ateni Sioni Church.1.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AAteni_Sioni_Church.1.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Ateni_Sioni_Church.1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Oleg Moro",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo28",
+    "index": 25,
+    "label": "Rabati Fortress in Akhaltsikhe",
+    "query": "Rabati",
+    "local_url": "/uploads/geojoy_tours_48.webp",
+    "file": "geojoy_tours_48.webp",
+    "file_bytes": 917800,
+    "dimensions": [
+      1920,
+      1310
+    ],
+    "source_dimensions": [
+      5862,
+      4000
+    ],
+    "commons_file": "Georgia, Akhaltsikhe, Rabati Castle (30327080592).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AGeorgia%2C_Akhaltsikhe%2C_Rabati_Castle_%2830327080592%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Georgia%2C_Akhaltsikhe%2C_Rabati_Castle_%2830327080592%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "John Wagner",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "tours",
+    "id": "geo29",
+    "index": 26,
+    "label": "Jvari Monastery in Mtskheta",
+    "query": "Jvari Monastery",
+    "local_url": "/uploads/geojoy_tours_49.webp",
+    "file": "geojoy_tours_49.webp",
+    "file_bytes": 1037882,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      6562,
+      4375
+    ],
+    "commons_file": "Jvari monastery 09.23 (2).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AJvari_monastery_09.23_%282%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Jvari_monastery_09.23_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "This Photo was taken by Supanut Arunoprayote . Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่ง ข้อความบอกกล่าวด้วย ) Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved. Please if you think that any changes should be required, please inform the author. Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract .",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "transfers",
+    "id": "tr1",
+    "index": 0,
+    "label": "Airport transfer",
+    "query": "Tbilisi Airport",
+    "local_url": "/uploads/geojoy_transfers_50.webp",
+    "file": "geojoy_transfers_50.webp",
+    "file_bytes": 256718,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      6000,
+      4000
+    ],
+    "commons_file": "Arrivals, Tbilisi International Airport, TBS (25876178687).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AArrivals%2C_Tbilisi_International_Airport%2C_TBS_%2825876178687%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Arrivals%2C_Tbilisi_International_Airport%2C_TBS_%2825876178687%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Andrew Milligan Sumo",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "transfers",
+    "id": "tr2",
+    "index": 1,
+    "label": "Intercity transfer",
+    "query": "Exact named Commons file: Georgian Military Highway 01.jpg",
+    "local_url": "/uploads/geojoy_transfers_51.webp",
+    "file": "geojoy_transfers_51.webp",
+    "file_bytes": 666298,
+    "dimensions": [
+      1920,
+      1277
+    ],
+    "source_dimensions": [
+      3008,
+      2000
+    ],
+    "commons_file": "Georgian Military Highway 01.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AGeorgian_Military_Highway_01.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Georgian_Military_Highway_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Morten Oddvik  from Trondheim, Norway",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "transfers",
+    "id": "tr3",
+    "index": 2,
+    "label": "Private transfer",
+    "query": "Exact named Commons file: 2019 Mercedes-Benz V-Class (W447) 1X7A1743.jpg",
+    "local_url": "/uploads/geojoy_transfers_52.webp",
+    "file": "geojoy_transfers_52.webp",
+    "file_bytes": 475896,
+    "dimensions": [
+      1920,
+      1437
+    ],
+    "source_dimensions": [
+      4054,
+      3035
+    ],
+    "commons_file": "2019 Mercedes-Benz V-Class (W447) 1X7A1743.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3A2019_Mercedes-Benz_V-Class_%28W447%29_1X7A1743.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/2019_Mercedes-Benz_V-Class_%28W447%29_1X7A1743.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Alexander-93",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "transfers",
+    "id": "tr4",
+    "index": 3,
+    "label": "Hotel transfer",
+    "query": "Tbilisi hotel",
+    "local_url": "/uploads/geojoy_transfers_53.webp",
+    "file": "geojoy_transfers_53.webp",
+    "file_bytes": 440104,
+    "dimensions": [
+      1920,
+      1411
+    ],
+    "source_dimensions": [
+      6134,
+      4509
+    ],
+    "commons_file": "Hotel London i Tbilisi, Georgia - no-nb digifoto 20150223 00090 bldsa HA0227.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AHotel_London_i_Tbilisi%2C_Georgia_-_no-nb_digifoto_20150223_00090_bldsa_HA0227.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Hotel_London_i_Tbilisi%2C_Georgia_-_no-nb_digifoto_20150223_00090_bldsa_HA0227.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Unknown author Unknown author",
+    "license": "Public domain",
+    "license_url": "",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "transfers",
+    "id": "tr5",
+    "index": 4,
+    "label": "7-seat minivan",
+    "query": "Exact named Commons file: 2018 Mercedes-Benz Vito 114 Bluetec Tourer Select 2.1.jpg",
+    "local_url": "/uploads/geojoy_transfers_54.webp",
+    "file": "geojoy_transfers_54.webp",
+    "file_bytes": 351438,
+    "dimensions": [
+      1920,
+      1210
+    ],
+    "source_dimensions": [
+      4525,
+      2852
+    ],
+    "commons_file": "2018 Mercedes-Benz Vito 114 Bluetec Tourer Select 2.1.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3A2018_Mercedes-Benz_Vito_114_Bluetec_Tourer_Select_2.1.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/2018_Mercedes-Benz_Vito_114_Bluetec_Tourer_Select_2.1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Vauxford",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "transfers",
+    "id": "tr6",
+    "index": 5,
+    "label": "Custom route",
+    "query": "Tusheti road",
+    "local_url": "/uploads/geojoy_transfers_55.webp",
+    "file": "geojoy_transfers_55.webp",
+    "file_bytes": 633072,
+    "dimensions": [
+      1920,
+      1233
+    ],
+    "source_dimensions": [
+      4301,
+      2763
+    ],
+    "commons_file": "2019 - Tusheti National Park - the road to Omalo.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3A2019_-_Tusheti_National_Park_-_the_road_to_Omalo.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/2019_-_Tusheti_National_Park_-_the_road_to_Omalo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Moahim",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "transferSlides",
+    "id": "vehicle-minivan",
+    "index": 0,
+    "label": "Comfortable minivan",
+    "query": "Mercedes V-Class",
+    "local_url": "/uploads/geojoy_transferslides_56.webp",
+    "file": "geojoy_transferslides_56.webp",
+    "file_bytes": 223330,
+    "dimensions": [
+      1920,
+      1281
+    ],
+    "source_dimensions": [
+      8192,
+      5464
+    ],
+    "commons_file": "MERCEDES BENZ V-CLASS (W447) China.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMERCEDES_BENZ_V-CLASS_%28W447%29_China.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/MERCEDES_BENZ_V-CLASS_%28W447%29_China.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "transferSlides",
+    "id": "vehicle-sprinter",
+    "index": 1,
+    "label": "Mercedes-Benz Sprinter minibus",
+    "query": "Mercedes Sprinter",
+    "local_url": "/uploads/geojoy_transferslides_57.webp",
+    "file": "geojoy_transferslides_57.webp",
+    "file_bytes": 480708,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      7016,
+      5262
+    ],
+    "commons_file": "Mercedes-Benz Sprinter.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMercedes-Benz_Sprinter.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Mercedes-Benz_Sprinter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Oleg Yunakov",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "transferSlides",
+    "id": "vehicle-delica-4x4",
+    "index": 2,
+    "label": "Mitsubishi Delica 4×4 off-road van",
+    "query": "Mitsubishi Delica 4x4",
+    "local_url": "/uploads/geojoy_transferslides_58.webp",
+    "file": "geojoy_transferslides_58.webp",
+    "file_bytes": 715320,
+    "dimensions": [
+      1920,
+      1440
+    ],
+    "source_dimensions": [
+      2816,
+      2112
+    ],
+    "commons_file": "Mitsubishi Delica 4X4 (24438097498).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMitsubishi_Delica_4X4_%2824438097498%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Mitsubishi_Delica_4X4_%2824438097498%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Егор Журавлёв from Smarde, Latvia",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "transferSlides",
+    "id": "vehicle-sedan",
+    "index": 3,
+    "label": "Premium sedan",
+    "query": "Mercedes E-Class",
+    "local_url": "/uploads/geojoy_transferslides_59.webp",
+    "file": "geojoy_transferslides_59.webp",
+    "file_bytes": 264710,
+    "dimensions": [
+      1920,
+      1061
+    ],
+    "source_dimensions": [
+      8192,
+      4525
+    ],
+    "commons_file": "MERCEDES-BENZ E CLASS LWB (V213) China (4).jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AMERCEDES-BENZ_E_CLASS_LWB_%28V213%29_China_%284%29.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/MERCEDES-BENZ_E_CLASS_LWB_%28V213%29_China_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Dinkun Chen",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  },
+  {
+    "group": "about",
+    "id": "about",
+    "index": 0,
+    "label": "Georgia, made to be discovered",
+    "query": "Tusheti",
+    "local_url": "/uploads/geojoy_about_60.webp",
+    "file": "geojoy_about_60.webp",
+    "file_bytes": 691100,
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "source_dimensions": [
+      5472,
+      3648
+    ],
+    "commons_file": "View of Tusheti from Samkinvrostsveri Pass.jpg",
+    "commons_page": "https://commons.wikimedia.org/wiki/File%3AView_of_Tusheti_from_Samkinvrostsveri_Pass.jpg",
+    "original_file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/View_of_Tusheti_from_Samkinvrostsveri_Pass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "author": "Yasuhiro Kojima",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "transformation": "Cropped none; no upscaling; resized only when either side exceeded 1920 px; converted to WebP at quality 86."
+  }
+]
