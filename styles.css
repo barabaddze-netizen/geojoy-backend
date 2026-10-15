@@ -248,3 +248,62 @@ button.small-link:hover{color:#fff0c4;border-bottom-color:#f0d69b;background:tra
 .transfer-hero-feature.transfer-image-load-failed{display:block!important;background:linear-gradient(125deg,#1c3a2a 0%,#254938 52%,#152a20 100%);}
 .transfer-hero-feature.transfer-image-load-failed>img{display:none!important;}
 .transfer-hero-feature.transfer-image-load-failed .transfer-hero-shade{background:linear-gradient(120deg,rgba(13,31,22,.45),rgba(13,31,22,.12));}
+
+/* ===== v8.9.1 mobile / tablet / touch polish (keep last) ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:84px}
+body{overflow-x:clip}
+img,video{max-width:100%}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #e0c994;outline-offset:3px}
+/* lighter scrim so the landmark photos stay vivid; text keeps contrast at the bottom */
+.region-card:after{background:linear-gradient(0deg,rgba(4,14,10,.88) 0%,rgba(4,14,10,.5) 34%,rgba(4,14,10,0) 70%)}
+.photo-card .image-wrap:after{background:linear-gradient(transparent,rgba(7,15,11,.28))}
+@media (hover:none){
+  .photo-card:hover{transform:none}
+  .photo-card:hover img,.region-card:hover img{transform:none}
+}
+@media (max-width:1000px) and (min-width:701px){
+  .hero-copy{padding-left:6%;padding-right:6%}
+}
+@media (max-width:700px){
+  /* inputs >=16px prevent the iOS zoom-on-focus */
+  input,select,textarea{font-size:16px!important}
+  .mobile-menu-button{min-width:44px;min-height:44px;display:grid;place-items:center}
+  .language-select{height:44px}
+  .slide-arrow{width:44px;height:44px}
+  .transfer-slide-arrow{width:42px;height:42px}
+  .button,.text-link,.filter-clear{min-height:44px}
+
+  /* Tours: swipeable carousel instead of 27 stacked cards */
+  #tourGrid.card-grid{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;margin-inline:-20px;padding:4px 20px 16px;scroll-padding-inline:20px;scrollbar-width:none}
+  #tourGrid.card-grid::-webkit-scrollbar{display:none}
+  #tourGrid .photo-card{flex:0 0 80%;max-width:330px;scroll-snap-align:start}
+  .photo-card .image-wrap{height:200px}
+
+  /* Regions: compact two-column tiles */
+  .region-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .region-card{min-height:210px}
+  .region-info h3{font-size:clamp(15px,4.8vw,19px);line-height:1.2;overflow-wrap:anywhere}
+  .region-info p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:12px;line-height:1.45}
+  .region-action{font-size:11px;letter-spacing:0;white-space:nowrap}
+  .language-select select{max-width:86px}
+
+  /* Transfers photo slider: no collisions between caption, arrows and dots */
+  .transfer-hero-feature{aspect-ratio:auto;height:clamp(300px,82vw,380px);max-height:none}
+  .transfer-slide-arrow{top:14px;transform:none}
+  .transfer-slide-arrow:hover{transform:scale(1.05)}
+  .transfer-hero-caption{left:16px;right:16px;bottom:56px;gap:5px}
+  .transfer-hero-caption>span:nth-child(3){display:none}
+  .transfer-hero-caption strong{font-size:clamp(20px,6vw,26px)}
+  .transfer-vehicle-label{max-width:100%;white-space:normal;line-height:1.3}
+
+  /* Floating contact: compact icon-only buttons clear of the content and the home indicator */
+  .floating-contact{right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));gap:10px}
+  .floating-contact a{width:48px;height:48px;padding:0;justify-content:center;gap:0;font-size:0}
+  .floating-contact .float-icon{width:30px;height:30px;border:0;background:transparent}
+  .floating-contact .float-icon svg{width:28px;height:28px}
+  footer{padding-bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+}
+@media (max-width:340px){
+  .region-grid{grid-template-columns:1fr}
+  #tourGrid .photo-card{flex-basis:88%}
+}

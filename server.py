@@ -1643,6 +1643,54 @@ def _valid_new_password(password):
     return isinstance(password, str) and len(password) >= MIN_PASSWORD_LENGTH and len(password) <= 256
 
 
+# v8.9.1 curated photo upgrades: each region cover now shows that region's most recognisable landmark.
+# Applied only while the stored image still equals the previous default, so photos chosen in the admin panel are never overwritten.
+PHOTO_UPGRADES = {
+    'regions': {
+        'adjara':    ('/uploads/geojoy_regions_12.webp', '/uploads/geojoy_tours_24.webp', '50% 55%'),
+        'kakheti':   ('/uploads/geojoy_regions_14.webp', '/uploads/geojoy_tours_40.webp', '50% 60%'),
+        'imereti':   ('/uploads/geojoy_regions_15.webp', '/uploads/geojoy_tours_42.webp', '50% 55%'),
+        'samtskhe':  ('/uploads/geojoy_regions_20.webp', '/uploads/geojoy_tours_48.webp', '50% 50%'),
+        'kvemo':     ('/uploads/geojoy_regions_21.webp', '/uploads/geojoy_tours_44.webp', '50% 55%'),
+        'shida':     ('/uploads/geojoy_regions_22.webp', '/uploads/geojoy_tours_46.webp', '50% 60%'),
+    },
+}
+HERO_UPGRADE = {
+    'old': '/uploads/geojoy_heroslides_07.webp',
+    'new': '/uploads/geojoy_tours_41.webp',
+    'position': '50% 45%',
+    'title': {
+        'ka': 'დავითგარეჯა — კლდეში ნაკვეთი მონასტერი',
+        'en': 'David Gareja, a monastery in the rock',
+        'ru': 'Давид-Гареджи — монастырь в скале',
+        'ar': 'دير داويت غاريجا المنحوت في الصخر',
+    },
+    'subtitle': {
+        'ka': 'კახეთის უძველესი სამონასტრო კომპლექსი და უდაბნოს ხედები.',
+        'en': "Kakheti's ancient cave monastery and sweeping desert views.",
+        'ru': 'Древний пещерный монастырь Кахетии и просторы полупустыни.',
+        'ar': 'مجمع الأديرة الكهفية العريق في كاخيتي وإطلالات الصحراء.',
+    },
+}
+
+
+def apply_photo_upgrades(content):
+    changed = False
+    for r in content.get('regions', []) if isinstance(content.get('regions'), list) else []:
+        up = PHOTO_UPGRADES['regions'].get(str(r.get('id'))) if isinstance(r, dict) else None
+        if up and str(r.get('image', '') or '') == up[0]:
+            r['image'], r['imagePosition'] = up[1], up[2]
+            changed = True
+    for s in content.get('heroSlides', []) if isinstance(content.get('heroSlides'), list) else []:
+        if isinstance(s, dict) and str(s.get('image', '') or '') == HERO_UPGRADE['old']:
+            s['image'] = HERO_UPGRADE['new']
+            s['imagePosition'] = HERO_UPGRADE['position']
+            s['title'] = dict(HERO_UPGRADE['title'])
+            s['subtitle'] = dict(HERO_UPGRADE['subtitle'])
+            changed = True
+    return changed
+
+
 def connect_db():
     # Migrate saved v5/v4 content and uploaded images from a neighboring project folder without editing its database.
     if not DB_PATH.exists():
@@ -1688,6 +1736,7 @@ def connect_db():
     if row is None:
         initial = json.loads(json.dumps(SEED, ensure_ascii=False))
         initial['siteVersion'] = APP_VERSION
+        apply_photo_upgrades(initial)
         con.execute('INSERT INTO content (id,json) VALUES (1,?)', (json.dumps(initial, ensure_ascii=False),))
         con.commit()
         return con
@@ -1844,6 +1893,8 @@ def connect_db():
         after_tour_ids = [str(t.get('id')) for t in current.get('tours', []) if isinstance(t, dict)]
         if before_region_ids != after_region_ids or len(before_region_names) != len(after_region_ids) or before_tour_ids != after_tour_ids:
             changed = True
+        if apply_photo_upgrades(current):
+            changed = True
         if current.get('siteVersion') != APP_VERSION:
             current['siteVersion'] = APP_VERSION
             changed = True
@@ -1887,7 +1938,8 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Content-Length', str(len(data)))
         self.send_header('X-Content-Type-Options','nosniff')
         self.send_header('Referrer-Policy','strict-origin-when-cross-origin')
-        self.send_header('Cache-Control','no-store')
+        if not (extra_headers and 'Cache-Control' in extra_headers):
+            self.send_header('Cache-Control','no-store')
         self.cors_headers()
         if extra_headers:
             for k,v in extra_headers.items(): self.send_header(k,v)
@@ -1961,7 +2013,7 @@ class Handler(BaseHTTPRequestHandler):
             name = Path(p).name
             target = UPLOADS / name
             if not target.exists() or not target.is_file(): return self.send_bytes(b'Not found','text/plain',404)
-            self.send_bytes(target.read_bytes(), mimetypes.guess_type(target.name)[0] or 'application/octet-stream')
+            self.send_bytes(target.read_bytes(), mimetypes.guess_type(target.name)[0] or 'application/octet-stream', 200, {'Cache-Control':'public, max-age=604800'})
         elif p.startswith('/static/'):
             name = Path(p).name
             if name not in STATIC_ASSETS: return self.send_bytes(b'Not found','text/plain',404)
